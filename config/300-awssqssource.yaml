@@ -210,6 +210,8 @@ spec:
                   oneOf:
                     - required: [ref]
                     - required: [uri]
+                annotations:
+                  type: object
                 maxBatchSize:
                   type: string
                   description: Max Message Size to poll from SQS
