@@ -47,9 +47,9 @@ const (
 	logfieldMsgID  = "msgID"
 	logfieldMsgIDs = "msgIDs"
 
-	defaultSendBatchedResponse = true
+	defaultSendBatchedResponse = false
 
-    defaultMaxBatchSize = 8
+    defaultMaxBatchSize = 10
 
     defaultOnFailedPollWaitSecs = 2
 
