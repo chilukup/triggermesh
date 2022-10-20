@@ -101,21 +101,6 @@ type adapter struct {
 	deleteQueue  chan *sqs.Message
 
 	deletePeriod time.Duration
-
-//     // MaxBatchSize is the max Batch size to be polled form SQS
-//     MaxBatchSize string
-//
-//     // SendBatchedResponse is a flag which if enabled will send all messages received in one HTTP event
-//     SendBatchedResponse string
-//
-//     // OnFailedPollWaitSecs determines the interval to wait after a
-//     // failed poll before making another one
-//     OnFailedPollWaitSecs string
-//
-//     // WaitTimeSeconds Controls the maximum time to wait in the poll performed with
-//     // ReceiveMessageWithContext.  If there are no messages in the
-//     // given secs, the call times out and returns control to us.
-//     WaitTimeSeconds string
 }
 
 // NewEnvConfig satisfies pkgadapter.EnvConfigConstructor.
@@ -194,20 +179,6 @@ func NewAdapter(ctx context.Context, envAcc pkgadapter.EnvConfigAccessor, ceClie
 
 		deletePeriod: maxDeleteMsgPeriod,
 
-//         // MaxBatchSize is the max Batch size to be polled form SQS
-//         MaxBatchSize: defaultMaxBatchSize,
-//
-//         // SendBatchedResponse is a flag which if enabled will send all messages received in one HTTP event
-//         SendBatchedResponse: defaultSendBatchedResponse,
-//
-//         // OnFailedPollWaitSecs determines the interval to wait after a
-//         // failed poll before making another one
-//         OnFailedPollWaitSecs: defaultOnFailedPollWaitSecs,
-//
-//         // WaitTimeSeconds Controls the maximum time to wait in the poll performed with
-//         // ReceiveMessageWithContext.  If there are no messages in the
-//         // given secs, the call times out and returns control to us.
-//         WaitTimeSeconds: defaultWaitTimeSeconds,
 	}
 }
 
