@@ -230,6 +230,10 @@ spec:
                 nodeSelector:
                   type: object
                   description: assigns Node Selector to the receive adapter pods
+                  properties:
+                    deployment.group:
+                      description: Reference to the node group that sqs adapter should be assigned.
+                      type: string
                 affinity:
                   type: object
                   description: assigns affinity to the receive adapter pods
