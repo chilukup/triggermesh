@@ -73,10 +73,6 @@ type AWSSQSSourceSpec struct {
 	// Adapter spec overrides parameters.
 	// +optional
 	AdapterOverrides *v1alpha1.AdapterOverrides `json:"adapterOverrides,omitempty"`
-
-	// Replicas count parameter.
-    // +optional
-    Replicas *int32 `json:"replicas,omitempty"`
 }
 
 // AWSSQSSourceReceiveOptions defines options that control the behavior of
